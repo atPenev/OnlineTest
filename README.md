@@ -15,10 +15,10 @@ The REST API was built using Spring Boot. The API has endpoints for registering 
 
 1. Visit https://www.pushbullet.com/ and Sign up
 2. Go to Devices
-    a. Install Pushbullet to a device of your choice (be it a phone or a web browser)
+   - Install Pushbullet to a device of your choice (be it a phone or a web browser)
 3. Go to Settings, Account
-    a. Select Create Access Token
-    b. Store the generated access token somewhere safe
+   - Select Create Access Token
+   - Store the generated access token somewhere safe
 
 # How to run the project #
 
@@ -30,10 +30,11 @@ Now using any API testing tool such as Fiddler or Postman you can make calls to 
 # API #
 
 **POST** http://{hostname}:{port}/api/v1/user
+
 Request for registering a user.
 
 #### Request Body
-Request Content Type application/json
+Request Content Type: application/json
 
     {
         "username": "bbcUser1",
@@ -43,7 +44,7 @@ Request Content Type application/json
 **anAccessToken** is the token generated in Pushbullet.
 
 #### Response Body
-Response Content Type application/json
+Response Content Type: application/json
 
     {
         "username": "bbcUser1",
@@ -61,10 +62,11 @@ Status 409 if the user is already registered
 ------
 
 **GET** http://{hostname}:{port}/api/v1/user
+
 Request for getting a list of all registered users
 
 #### Response Body
-Response Content Type application/json
+Response Content Type: application/json
 
     [
         {
@@ -87,17 +89,18 @@ Response Content Type application/json
         }
     ]
 
-###Response Status
+### Response Status
 
 Status 200 on success
 
 ------
 
 **POST** http://{hostname}:{port}/api/v1/push/{username}
+
 Request for pushing a Pushbullet notification to a registered user.
  
 #### Request Body
-Request Content Type application/json
+Request Content Type: application/json
 
     {
         "title": "string",
@@ -106,7 +109,7 @@ Request Content Type application/json
     }
 
 #### Response Body
-Response Content Type application/json
+Response Content Type: application/json
 
     {
         "active": boolean,
@@ -135,10 +138,11 @@ Status 400 if the user is not registered
 ------
 
 **PUT** http://{hostname}:{port}/api/v1/user
+
 Request for updating the access token of an already registered user.
 
 #### Request Body
-Request Content Type application/json
+Request Content Type: application/json
 
     {
         "username": "bbcUser1",
@@ -146,7 +150,7 @@ Request Content Type application/json
     }
 
 #### Response Body
-Response Content Type application/json
+Response Content Type: application/json
 
     {
         "username": "bbcUser1",
@@ -164,6 +168,7 @@ Status 400 if the user is not registered
 ------
 
 **DELETE** http://{hostname}:{port}/api/v1/user/{username}
+
 Request for deleting a registered user.
 
 #### Response Status
@@ -174,10 +179,11 @@ Status 400 if the user is not registered
 ------
 
 **GET** http://{hostname}:{port}/api/v1/user/{username}
+
 Request for getting a registered user.
 
 #### Response Body
-Response Content Type application/json
+Response Content Type: application/json
 
     {
         "username": "username",
