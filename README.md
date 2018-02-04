@@ -2,7 +2,7 @@
 
 # Description #
 
-The REST API was built using Spring Boot. The API has endpoints for registering users, getting a list of all registered users and sending pushbullet notifications to any of the registered users by username only.
+The REST API was built using Spring Boot. The API has endpoints for registering users, getting a list of all registered users and sending pushbullet notifications to any of the registered users by username only. The project has been unit tested.
 
 # Prerequisites #
 

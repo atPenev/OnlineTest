@@ -1,4 +1,4 @@
-package com.bbc.controller.dao;
+package com.bbc.dao;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
